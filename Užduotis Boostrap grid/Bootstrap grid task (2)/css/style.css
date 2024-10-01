@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: white;
+    color: #303030;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 40px;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+h5 {
+    color: #1F6F9A;
+    font-weight: 400;
+}
+
+p {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.com-button {
+    background-color: #1F6F9A;
+    font-weight: 300;
+    font-size: 18px;
+    padding: .7em 2em;
+    border-radius: 100px;
+}
+
+.card {
+    border-radius: 3px;
+    border: 1px solid #D1D1D1;
+}
+
+.com-icon {
+    width: 100px;
+    height: 100px;
+
+}
+
+.list-group-item {
+    border-bottom: 1px solid #D1D1D1;
+    padding: 1rem .9em;
+    margin-bottom: .5em;
+    background-color: transparent;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}

@@ -1,0 +1,12 @@
+# 1
+
+a, b = 5, 10 
+if a > b:
+    DID, MAZ = a, b
+elif b > a:
+    DID, MAZ = b, a
+else:
+    print("Skaičiai yra lygūs.")
+    
+print("DID:", DID)
+print("MAZ:", MAZ)

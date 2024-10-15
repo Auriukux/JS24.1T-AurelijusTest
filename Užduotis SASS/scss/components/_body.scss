@@ -1,0 +1,12 @@
+body {
+    background: $primary-gradient;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+
+    @include respond(tablet) {
+        height: auto;
+        padding: 20px 0;
+    }
+}

@@ -1,0 +1,14 @@
+button {
+  @include styled-text($button-color, 1em, bold);
+  margin: 30px auto;
+  padding: 10px 140px;
+  border: none;
+  border-radius: 20px;
+  background: $primary-gradient;
+  cursor: pointer;
+  transition: transform .2s;
+
+  &:hover {
+    transform: scale(0.95);
+  }
+}

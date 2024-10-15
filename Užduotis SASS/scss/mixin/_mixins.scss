@@ -1,0 +1,18 @@
+@mixin styled-text($color: black, $size: 1em, $weight: normal) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    transition: color 0.3s ease;
+    &:hover {
+      color: dark($color, 10%);
+    }
+  }
+
+  @mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+      @media only screen and (max-width: 375px) { @content; }
+    }
+    @if $breakpoint == tablet {
+      @media only screen and (max-width: 768px) { @content; }
+    }
+  }

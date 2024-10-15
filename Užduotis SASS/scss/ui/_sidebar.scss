@@ -1,0 +1,50 @@
+.container{
+    border-radius: 8px;
+    background-color: white;
+    height: $container-height;
+    width: $container-width;
+    display: block;
+    text-align: center;
+    box-shadow: $shadow;
+}
+
+h1, p, a, input, label {
+    color: #000;
+    font-family: $font-family;
+}
+
+h1 {
+    @include styled-text(black, 2em, bold);
+    margin: 50px 0;
+}
+
+p {
+    font-size: 0.8em;
+}
+
+form a {
+    display: block;
+    padding-right: 50px;
+    text-align: right;
+    font-size: 0.7em;
+    padding-top: 10px;
+}
+
+.sign-up {
+    padding-top: 100px;
+
+    a {
+       font: {
+        size: 0.8em;
+       }
+    }
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }

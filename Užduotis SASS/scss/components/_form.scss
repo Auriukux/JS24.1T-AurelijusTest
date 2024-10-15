@@ -1,0 +1,23 @@
+form {
+    label {
+      display: block;
+      text-align: left;
+      margin-left: 50px;
+      font-size: 0.9em;
+      padding-top: 10px;
+    }
+
+    input {
+      border: none;
+      border-bottom: 2px solid lightgrey;
+      width: 300px;
+      transition: all 0.3s;
+      padding-top: 10px;
+      padding-left: 20px;
+      padding-bottom: 10px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+}

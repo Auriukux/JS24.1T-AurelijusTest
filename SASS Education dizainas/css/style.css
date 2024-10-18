@@ -1,0 +1,244 @@
+body {
+  background-color: rgb(233, 231, 228);
+  font-family: "Poppins", sans-serif;
+  color: #1F1D2A;
+  margin: 0px 0px 0px 120px;
+  padding: 0;
+}
+
+.header {
+  width: 1272px;
+  box-sizing: border-box;
+}
+.header__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  margin-top: 40px;
+}
+.header__navbar-links {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.header__navbar-title {
+  font-size: 32px;
+  font-weight: 500;
+  font-weight: 400;
+  margin: 0;
+}
+.header__navbar-link {
+  font-size: 16px;
+  color: #1F1D2A;
+  text-decoration: none;
+  margin: 0 25px;
+}
+.header__navbar-link:nth-child(1) {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 7px;
+}
+
+.main__heading {
+  font-size: 55px;
+  font-weight: 600;
+  line-height: 82.5px;
+  margin: 0;
+  padding-top: 62px;
+  width: 581px;
+}
+.main__description {
+  margin: 0;
+  padding-top: 30px;
+  font-size: 16px;
+  color: #9B948E;
+  width: 461px;
+  line-height: 30px;
+}
+.main__title {
+  margin: 0;
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.main__career {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #9B948E;
+}
+.main__trust-title {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+}
+
+.footer__grow-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+.footer__grow-heading {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+  margin-top: 10px;
+}
+.footer__grow-heading span {
+  text-decoration: underline;
+  text-decoration-color: #96C67F;
+  text-decoration-thickness: 5px;
+}
+
+.card__title {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.card__description {
+  font-size: 16px;
+  font-weight: 400;
+  color: #9B948E;
+  margin: 0;
+  margin-left: 20px;
+  margin-top: 6px;
+  margin-bottom: 23px;
+}
+
+.header__navbar-button {
+  background-color: rgb(233, 231, 228);
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+.main__button {
+  background-color: #96C67F;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 24px 32px;
+  margin-top: 50px;
+}
+
+.main__content {
+  width: 1200px;
+  height: 531px;
+  box-sizing: border-box;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.main__hero-img {
+  background-image: url(../img/hero_design.jfif);
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 500px;
+  border-radius: 250px;
+  margin-right: 40px;
+}
+.main__card {
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  height: 120px;
+  width: 180px;
+  position: absolute;
+  top: 589px;
+  left: 810px;
+}
+.main__stars-list {
+  display: flex;
+  padding-top: 16px;
+  padding-left: 20px;
+}
+.main__stars-item {
+  width: 22px;
+  height: 22px;
+  background: #ffb988;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  margin-right: 5px;
+}
+.main__ellipse {
+  background-color: rgb(148, 153, 183);
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  top: 398px;
+  left: 1240px;
+}
+.main__polygon {
+  background-image: url(../img/triangle-icon.png);
+  background-size: cover;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 27px;
+  left: 30px;
+}
+.main__trust {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: -120px;
+  margin-top: 100px;
+}
+.main__trust-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3.73rem;
+  max-width: 764px;
+  margin-top: 30px;
+}
+.main__trust-item:nth-child(2) {
+  margin-right: -3.23rem;
+}
+.main__trust-item img {
+  max-width: auto;
+  height: 30px;
+}
+
+.footer__grow {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: -120px;
+  margin-top: 100px;
+}
+.footer__teachers {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  display: grid;
+  grid-template-columns: 295.5px 295.5px 295.5px 295.5px;
+  column-gap: 31px;
+}
+
+.card {
+  background-color: white;
+  width: 295.5px;
+  border-radius: 15px;
+}
+.card__profile img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 350px;
+  width: 295.5px;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */

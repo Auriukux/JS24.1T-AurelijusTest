@@ -1,0 +1,17 @@
+.header {
+    width: 1272px;
+    box-sizing: border-box;
+
+    &__navbar {
+        @include flex-center;
+        justify-content: space-between;
+        height: 100%;
+        margin-top: 40px;
+    
+        &-links {
+          display: flex;
+          flex: 1;
+          justify-content: center;
+        }
+    }
+}

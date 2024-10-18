@@ -1,0 +1,109 @@
+.main {
+  &__content {
+    width: 1200px;
+    height: 531px;
+    box-sizing: border-box;
+    margin-top: 100px;
+    display: flex; 
+    justify-content: space-between;
+  }
+
+  &__hero-img {
+    background: {
+      image: url(../img/hero_design.jfif);
+      size: cover;
+      position: center;
+    } 
+    height: 500px;
+    width: 500px;
+    border-radius: 250px;
+    margin-right: 40px;
+  }
+
+  &__card {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    height: 120px;
+    width: 180px;
+    position: absolute;
+    top: 589px;
+    left: 810px;
+  }
+  
+  &__stars-list {
+    display: flex;
+    padding: {
+      top: 16px;
+      left: 20px;
+    }
+  }
+
+  &__stars-item {
+    width: 22px;
+    height: 22px;
+    background: #ffb988;
+    clip-path: polygon(
+      50% 0%,
+      61% 35%,
+      98% 35%,
+      68% 57%,
+      79% 91%,
+      50% 70%,
+      21% 91%,
+      32% 57%,
+      2% 35%,
+      39% 35%
+    );
+    margin-right: 5px;
+  }
+
+  &__ellipse {
+    background-color: rgb(148, 153, 183);
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    top: 398px;
+    left: 1240px;
+  }
+
+  &__polygon {
+    background: {
+      image: url(../img/triangle-icon.png);
+      size: cover;
+    }
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 27px;
+    left: 30px;
+  }
+
+  &__trust {
+    @include flex-center;
+    flex-direction: column;
+    margin: {
+      left: -120px;
+      top: 100px;
+    } 
+  }
+
+  &__trust-list {
+    @include flex-center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3.73rem;
+    max-width: 764px;
+    margin-top: 30px;
+  }
+
+  &__trust-item:nth-child(2) {
+    margin-right: -3.23rem;
+  }
+
+  &__trust-item img {
+    max-width: auto;
+    height: 30px;
+  }
+}

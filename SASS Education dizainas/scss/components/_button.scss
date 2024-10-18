@@ -1,0 +1,29 @@
+.header {
+    &__navbar {
+        &-button {
+            background-color: $body-themes;        
+            border: {
+                width: 2px;
+                style: solid;
+                radius: 6px;
+            }
+            font-size: $font-primary;
+            padding: 10px 25px;
+            cursor: pointer;
+        }
+    }
+}
+
+.main {
+    &__button {
+        background-color: #96C67F;
+        border: none;
+        border-radius: 6px;
+        font: {
+            size: 20px;
+            weight: 600;
+        }
+        padding: 24px 32px;
+        margin-top: 50px;
+    }
+}

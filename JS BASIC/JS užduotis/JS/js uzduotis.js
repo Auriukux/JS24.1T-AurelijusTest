@@ -82,7 +82,6 @@ console.log("---------------------------------------------------");
 console.log("\nExtra task:");
 
 
-
 function filterBooksBy(books, category = null, title = null, minPages = null, maxPages = null) {
     return books.flatMap(kat => {
         return kat.knygos.filter(knyga =>
@@ -175,13 +174,11 @@ function printBookstitle(bookList, title) {
     });
 }
 
-// Jūsų knygų duomenys ir rūšiavimas turėtų būti čia:
 const allBooks = atsargos.flatMap(kat => kat.knygos);
 const sortedBooksByTitle = sortBooksByTitle(allBooks);
 const sortedBooksByPriceDesc = sortBooksByPrice(allBooks, 'desc');
 const sortedBooksByAuthor = sortBooksByAuthor(allBooks);
 
-// Spausdinimas
 printBooksauthor(sortedBooksByAuthor, "Knygos surūšiuotos pagal autorius didėjančia tvarka");
 printBooksprice(sortedBooksByPriceDesc, "Knygos surūšiuotos pagal kainą mažėjimo tvarka");
 printBookstitle(sortedBooksByTitle, "Knygos surūšiuotos pagal pavadinimą");

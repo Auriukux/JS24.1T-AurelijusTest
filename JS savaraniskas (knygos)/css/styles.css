@@ -1,0 +1,424 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #F4F4F4;
+    color: #333333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4A90E2;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+#books {
+    background-color: white;
+    padding: 20px;
+    padding-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.filtruojimo-juosta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.filtruojimo-juosta input,
+.filtruojimo-juosta select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#rusiavimasPagal {
+    margin: 0 5px;
+}
+
+#rusiavimasKryptis {
+    margin: 0 5px;
+}
+
+#kainosMygtukai {
+    text-align: center;
+}
+
+#kainosMygtukai button {
+    margin: 0 3px;
+}
+
+#kainosRezultatas {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+#kainosRezultatas.show-result {
+    background-color: #F0F8FF;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+    border: 1px solid #B0E0E6;
+    text-align: center;
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#content {
+    flex-grow: 1;
+}
+
+#inventoriausVerte table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#inventoriausVerte th,
+#inventoriausVerte td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#inventoriausVerte th {
+    background-color: #f2f2f2;
+}
+
+#inventoriausVerte tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#inventoriausVerte tr:hover {
+    background-color: #f5f5f5;
+}
+
+button {
+    background-color: #7ED321;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #63b31d;
+}
+
+.no-results {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+    color: #333333;
+}
+
+#knyguSarasas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.knygos-korta {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 14px);
+    height: 280px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    display: flex;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.knygos-korta.show:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.knygos-korta:hover {
+    transform: scale(1.10);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.knygos-vaizdas-wrapper {
+    width: 40%;
+    flex-shrink: 0;
+    background-color: #f0f0f0;
+    height: 280px;
+    overflow: hidden;
+}
+
+.knygos-vaizdas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.knygos-info {
+    padding: 15px 6px 15px 10px;
+    height: calc(100%-200%);
+    width: 60%;
+    box-sizing: border-box;
+}
+
+.knygos-info h3 {
+    line-height: 1.2em;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.new-label {
+    display: block;
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.knygos-info h3:has(span.new-label) {
+    margin-bottom: 10px;
+}
+
+.knygos-info p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+footer {
+    background-color: #4A90E2;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+
+@media (max-width: 1024px) {
+    .filtruojimo-juosta {
+
+        & input,
+        & select,
+        & button {
+            padding: 8px;
+            font-size: 13px;
+        }
+    }
+
+    #kainosMygtukai button {
+        margin: 0;
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    #buttonContainer button {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    #knyguSarasas {
+        justify-content: center;
+    }
+
+    .knygos-korta {
+        width: calc(33.4% - 14px);
+        height: 220px;
+        margin-bottom: 10px;
+    }
+
+    .knygos-vaizdas-wrapper {
+        height: 220px;
+        width: 45%;
+    }
+
+    .knygos-info {
+        padding: 10px;
+        height: auto;
+    }
+
+    .knygos-info h3 {
+        font-size: 15px;
+    }
+
+    .knygos-info p {
+        font-size: 12px;
+    }
+
+    .new-label {
+        font-size: 10px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    #books {
+        padding-bottom: 10px;
+    }
+
+    .filtruojimo-juosta {
+        flex-direction: column;
+    }
+
+    .filtruojimo-juosta input,
+    .filtruojimo-juosta select,
+    .filtruojimo-juosta button {
+        width: 100%;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    #rusiavimasPagal {
+        margin: 0;
+    }
+
+    #rusiavimasKryptis {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    #kainosMygtukai {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #kainosMygtukai button {
+        margin: 0;
+        width: calc(50% - 5px);
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    #buttonContainer button {
+        width: 100%;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .knygos-korta {
+        height: 180px;
+        width: 229.3px;
+    }
+
+    .knygos-korta.show {
+        margin-bottom: 10px;
+    }
+
+    .knygos-vaizdas-wrapper {
+        height: 180px;
+        width: 50%;
+    }
+
+    .knygos-vaizdas {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .knygos-info {
+        padding: 8px;
+        font-size: 0.8em;
+        width: 55%;
+    }
+
+    .knygos-info h3 {
+        line-height: 1.3;
+        font-size: 10px;
+    }
+
+    .knygos-info h3:has(span.new-label) {
+        margin-bottom: 10px;
+    }
+
+    .new-label {
+        font-size: 8px;
+    }
+
+    .knygos-info p {
+        font-size: 9px;
+        margin: 2px 0;
+    }
+
+    #knyguSarasas {
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .knygos-korta {
+        width: 100%;
+        height: 220px;
+    }
+
+    .knygos-vaizdas-wrapper {
+        height: 220px;
+        width: 40%;
+    }
+
+    .knygos-info {
+        width: 100%;
+    }
+
+    .knygos-info h3 {
+        font-size: 15px;
+    }
+
+    .knygos-info p {
+        font-size: 13px;
+    }
+
+    .new-label {
+        margin: 2px 0 5px 0;
+        font-size: 10px;
+    }
+}

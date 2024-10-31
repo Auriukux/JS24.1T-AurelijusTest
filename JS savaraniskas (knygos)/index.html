@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="lt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knygų Inventoriaus Valdymas</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Knygų Inventoriaus Valdymas</div>
+    </header>
+
+    <main>
+      <div class="wrapper">
+        <section id="books">
+          <div class="filtruojimo-juosta">
+            <select id="kategorijosFiltras">
+              <option value="">Visos kategorijos</option>
+              <option value="Informacinės technologijos">
+                Informacinės technologijos
+              </option>
+              <option value="Fantastika">Fantastika</option>
+              <option value="Distopinė fantastika">Distopinė fantastika</option>
+              <option value="Mokslinė fantastika">Mokslinė fantastika</option>
+              <option value="Detektyvas">Detektyvas</option>
+              <option value="Romantika">Romantika</option>
+              <option value="Psichologija">Psichologija</option>
+              <option value="Komedija">Komedija</option>
+            </select>
+            <input
+              type="text"
+              id="pavadinimoPaieska"
+              placeholder="Ieškoti knygos..."
+            />
+            <input
+              type="number"
+              id="minPuslapiai"
+              placeholder="Min. puslapių"
+            />
+            <input
+              type="number"
+              id="maxPuslapiai"
+              placeholder="Max. puslapių"
+            />
+            <button onclick="filtruotiKnygas()">Filtruoti</button>
+            <button id="resetFilters">Atstatyti filtrus</button>
+            <div class="rusiavimasPagal">
+              <label for="rusiavimasPagal">Rūšiuoti pagal:</label>
+              <select id="rusiavimasPagal">
+                <option value="pavadinimas">Pavadinimą</option>
+                <option value="kaina">Kainą</option>
+              </select>
+              <label for="rusiavimasKryptis">Kryptis:</label>
+              <select id="rusiavimasKryptis">
+                <option value="ascending">A-Z | Mažiausia kaina</option>
+                <option value="descending">Z-A | Didžiausia kaina</option>
+              </select>
+              <button onclick="rusiuoti()">Rūšiuoti</button>
+            </div>
+          </div>
+          <div id="kainosMygtukai">
+            <button onclick="rastiPigiausiaKnyga()">Pigiausia knyga</button>
+            <button onclick="rastiBrangiausiaKnyga()">Brangiausia knyga</button>
+          </div>
+          <div id="buttonContainer">
+            <button id="skaiciuotiInventoriausVerte">
+              Apskaičiuoti inventoriaus vertę
+            </button>
+          </div>
+          <div id="content">
+            <div id="inventoriausVerte"></div>
+            <div id="kainosRezultatas"></div>
+            <div id="no-results" style="display: none"></div>
+            <div id="knyguSarasas"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <small>Auriukux © 2024 Knygų Valdymo Sistema</small>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

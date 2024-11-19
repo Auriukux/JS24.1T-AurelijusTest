@@ -9,6 +9,7 @@
     .login-box {
         width: 60%; 
         text-align: left;
+        color: black;
         
         h2 {
             margin: 0;
@@ -22,6 +23,7 @@
         }
     
         input {
+            background-color: white;
             width: calc(100% - 56px);
             display: block;
             border: 1px solid lightgrey;

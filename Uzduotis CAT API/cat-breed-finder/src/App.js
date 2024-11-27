@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import BreedSelector from './components/BreedSelector';
 import CatGallery from './components/CatGallery';
-import axios from 'axios';
 import './App.css';
 
 function App() {
@@ -17,24 +16,34 @@ function App() {
   }, []);
 
   const fetchBreeds = async () => {
+    setLoading(true);
     try {
-      const response = await axios.get('https://api.thecatapi.com/v1/breeds', {
-        headers: { 'x-api-key': `${API_KEY}` }
+      const response = await fetch('https://api.thecatapi.com/v1/breeds', {
+        headers: { 'x-api-key': API_KEY }
       });
-      setBreeds(response.data);
+      if (!response.ok) {
+        throw new Error('Failed to fetch breeds');
+      }
+      const data = await response.json();
+      setBreeds(data);
     } catch (error) {
       console.error('Breeds fetch error:', error);
+    } finally {
+      setLoading(false);
     }
   };
 
   const fetchCatImages = async (breedId) => {
     setLoading(true);
     try {
-      const response = await axios.get('https://api.thecatapi.com/v1/images/search', {
-        params: { breed_ids: breedId, limit: 10 },
-        headers: { 'x-api-key': `${API_KEY}` }
+      const response = await fetch(`https://api.thecatapi.com/v1/images/search?breed_ids=${breedId}&limit=10`, {
+        headers: { 'x-api-key': API_KEY }
       });
-      setCatImages(response.data);
+      if (!response.ok) {
+        throw new Error('Failed to fetch cat images');
+      }
+      const data = await response.json();
+      setCatImages(data);
     } catch (error) {
       console.error('Images fetch error:', error);
     } finally {

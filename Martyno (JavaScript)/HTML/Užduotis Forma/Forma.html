@@ -5,51 +5,56 @@
   </head>
   <body>
     <h1>Darbo Prašymo Forma</h1>
-
     <form>
       <label for="firstName">Vardas:</label>
-      <input type="text" id="firstName" name="firstName" /><br /><br />
+      <input type="text" id="firstName" name="firstName" />
 
       <label for="lastName">Pavardė:</label>
       <input type="text" id="lastName" name="lastName" /><br /><br />
 
       <label for="birthDate">Gimimo data:</label>
-      <input type="date" id="birthDate" name="birthDate" /><br /><br />
+      <input type="date" id="birthDate" name="birthDate" />
 
       <label for="age">Amžius:</label>
       <input type="number" id="age" name="age" /><br /><br />
 
       <label for="gender">Lytis:</label>
       <select id="gender" name="gender">
-        <option value="male">Vyras</option></select
-      ><br /><br />
+        <option value="male">Vyras</option>
+        <option value="female">Moteris</option>
+      </select>
 
       <label for="email">El. pašto adresas:</label>
-      <input type="email" id="email" name="email" /><br /><br />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Įveskite el. pašto adresą"
+      /><br /><br />
 
-      <label>Pasirinkite poziciją:</label><br />
+      <label>Pasirinkite poziciją:</label>
       <input type="radio" id="junior" name="position" value="junior" />
-      <label for="junior">Junior Developer</label><br />
+      <label for="junior">Junior Developer</label>
       <input type="radio" id="midlevel" name="position" value="midlevel" />
-      <label for="midlevel">Mid-level Developer</label><br />
+      <label for="midlevel">Mid-level Developer</label>
       <input type="radio" id="senior" name="position" value="senior" />
       <label for="senior">Senior Developer</label><br /><br />
 
-      <label>Programavimo kalbos:</label><br />
+      <label>Programavimo kalbos:</label>
       <input type="checkbox" id="java" name="languages" value="java" />
-      <label for="java">Java</label><br />
+      <label for="java">Java</label>
       <input
         type="checkbox"
         id="javascript"
         name="languages"
         value="javascript"
       />
-      <label for="javascript">JavaScript</label><br />
+      <label for="javascript">JavaScript</label>
       <input type="checkbox" id="python" name="languages" value="python" />
       <label for="python">Python</label><br /><br />
 
       <label for="password">Slaptažodis:</label>
-      <input type="password" id="password" name="password" /><br /><br />
+      <input type="password" id="password" name="password" />
 
       <label for="confirmPassword">Patvirtinkite slaptažodį:</label>
       <input

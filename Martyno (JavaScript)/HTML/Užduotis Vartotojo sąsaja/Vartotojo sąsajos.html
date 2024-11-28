@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vartotojo sąsajos</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(
+          135deg,
+          rgb(86, 81, 235),
+          rgb(176, 88, 236)
+        );
+        font-family: "Arial", sans-serif;
+      }
+
+      .container {
+        height: 90vh;
+        max-height: 880px;
+        width: 70%;
+        max-width: 1200px;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .left-pane,
+      .right-pane {
+        width: 50%;
+        box-sizing: border-box;
+      }
+
+      .left-pane {
+        height: 90vh;
+        float: left;
+        background: linear-gradient(
+          0deg,
+          rgb(57, 134, 250) 0%,
+          rgb(77, 196, 255) 50%,
+          rgb(62, 234, 255) 100%
+        );
+        color: white;
+        padding: 30px;
+        padding-bottom: 0;
+      }
+
+      .right-pane {
+        float: right;
+        padding: 60px 80px;
+        color: #b2b2b2;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .form-group input {
+        width: 89%;
+        padding: 20px;
+        border: 2px solid #b2b2b2;
+        border-radius: 8px;
+      }
+
+      .form-group input[type="checkbox"] {
+        width: auto;
+        transform: scale(2);
+        margin-right: 10px;
+        margin-left: 7px;
+      }
+
+      .form-group label[for="remember"] {
+        display: inline-block;
+      }
+
+      .login-button {
+        background-color: #3b9af8;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        padding: 20px;
+        border: none;
+        border-radius: 8px;
+        width: 100%;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .login-button:hover {
+        background-color: #0b85e8;
+      }
+
+      .links {
+        margin-top: 15%; 
+      }
+
+      .links a {
+        color: #b2b2b2; 
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      .signup-link span {
+        color: #3b9af8; 
+      }
+
+      .signup-link span:hover {
+        text-decoration: underline;
+      }
+
+      .forgot-password-link {
+        float: right; 
+        font-style: italic; 
+        color: #b2b2b2; 
+      }
+
+      .forgot-password-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-pane">
+        <img
+          src="images/SpaceX_logo.svg"
+          alt="SpaceX logo"
+          height="50"
+          width="200"
+        />
+        <h1 style="margin-top: 25%; margin-bottom: 3%; font-size: 55px">
+          Welcome to...
+        </h1>
+        <p style="width: 400px">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p style="margin-top: 60%">Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="right-pane">
+        <h1 style="margin: 0 auto; font-size: 37px; color: #3b9af8">Login</h1>
+        <p style="margin-top: 2%; margin-bottom: 15%">
+          Welcome! Login to get amazing discounts and offers only for you.
+        </p>
+        <form>
+          <div class="form-group">
+            <label for="username">User Name</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="remember" name="remember" />
+            <label for="remember">Remember me</label>
+          </div>
+          <button type="submit" class="login-button">LOGIN</button>
+        </form>
+        <div class="links">
+          <a href="#" class="signup-link">New User? <span>Signup</span></a>
+          <a href="#" class="forgot-password-link">Forgot your password?</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Darbo Prašymo Forma</title>
+  </head>
+  <body>
+    <h1>Darbo Prašymo Forma</h1>
+
+    <form>
+      <label for="firstName">Vardas:</label>
+      <input type="text" id="firstName" name="firstName" /><br /><br />
+
+      <label for="lastName">Pavardė:</label>
+      <input type="text" id="lastName" name="lastName" /><br /><br />
+
+      <label for="birthDate">Gimimo data:</label>
+      <input type="date" id="birthDate" name="birthDate" /><br /><br />
+
+      <label for="age">Amžius:</label>
+      <input type="number" id="age" name="age" /><br /><br />
+
+      <label for="gender">Lytis:</label>
+      <select id="gender" name="gender">
+        <option value="male">Vyras</option></select
+      ><br /><br />
+
+      <label for="email">El. pašto adresas:</label>
+      <input type="email" id="email" name="email" /><br /><br />
+
+      <label>Pasirinkite poziciją:</label><br />
+      <input type="radio" id="junior" name="position" value="junior" />
+      <label for="junior">Junior Developer</label><br />
+      <input type="radio" id="midlevel" name="position" value="midlevel" />
+      <label for="midlevel">Mid-level Developer</label><br />
+      <input type="radio" id="senior" name="position" value="senior" />
+      <label for="senior">Senior Developer</label><br /><br />
+
+      <label>Programavimo kalbos:</label><br />
+      <input type="checkbox" id="java" name="languages" value="java" />
+      <label for="java">Java</label><br />
+      <input
+        type="checkbox"
+        id="javascript"
+        name="languages"
+        value="javascript"
+      />
+      <label for="javascript">JavaScript</label><br />
+      <input type="checkbox" id="python" name="languages" value="python" />
+      <label for="python">Python</label><br /><br />
+
+      <label for="password">Slaptažodis:</label>
+      <input type="password" id="password" name="password" /><br /><br />
+
+      <label for="confirmPassword">Patvirtinkite slaptažodį:</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        name="confirmPassword"
+      /><br /><br />
+
+      <input type="submit" value="Pateikti" />
+      <input type="reset" value="Atstatyti" />
+    </form>
+  </body>
+</html>

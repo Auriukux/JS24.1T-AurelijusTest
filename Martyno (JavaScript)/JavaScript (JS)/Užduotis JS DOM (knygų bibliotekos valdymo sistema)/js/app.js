@@ -1,39 +1,40 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    const form = document.getElementById('bookForm');
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('addBookForm');
     const bookList = document.getElementById('bookList');
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
-
-        const title = document.getElementById('title').value.trim();
-        const author = document.getElementById('author').value.trim();
-
-        if (title && author) {
-            const bookDiv = document.createElement('div');
-            bookDiv.className = 'book';
-            bookDiv.innerHTML = `
-                <h3>${title}</h3>
-                <p>Autorius: ${author}</p>
-                <button onclick="toggleReadStatus(this)">Neperskaityta</button>
-            `;
-            bookList.appendChild(bookDiv);
-            console.log('Knyga pridėta:', title, ' Autorius:', author);
-
-            form.reset();
-        } else {
-            console.warn('Neįvestas knygos pavadinimas arba autorius.');
-        }
+        addBook();
     });
 
-    window.toggleReadStatus = function (button) {
-        if (button && button.parentElement) {
-            const bookElement = button.parentElement;
-            const status = button.textContent === 'Neperskaityta' ? 'Perskaityta' : 'Neperskaityta';
-            console.log('Knygos statusas pakeistas:', bookElement.querySelector('h3').textContent, 'į', status);
-            button.textContent = status;
-            bookElement.classList.toggle('read');
-        } else {
-            console.error('Klaida keičiant knygos statusą: mygtukas arba tėvinis elementas nerastas.');
+    function addBook() {
+        const title = document.getElementById('bookTitle').value.trim();
+        const author = document.getElementById('bookAuthor').value.trim();
+
+        if (title && author) {
+            if (bookList.classList.contains('hidden')) {
+                bookList.classList.remove('hidden');
+                const listTitle = document.createElement('h2');
+                listTitle.textContent = 'Knygų sąrašas';
+                bookList.appendChild(listTitle);
+            }
+
+            const bookElement = document.createElement('div');
+            bookElement.className = 'book-item';
+            bookElement.innerHTML = `
+                <span>${title} - ${author}</span>
+                <button class="status-btn book-unread">Neperskaityta</button>
+            `;
+
+            const statusButton = bookElement.querySelector('.status-btn');
+            statusButton.addEventListener('click', function () {
+                this.classList.toggle('book-read');
+                this.classList.toggle('book-unread');
+                this.textContent = this.classList.contains('book-read') ? 'Perskaityta' : 'Neperskaityta';
+            });
+
+            bookList.appendChild(bookElement);
+            form.reset();
         }
-    };
+    }
 });

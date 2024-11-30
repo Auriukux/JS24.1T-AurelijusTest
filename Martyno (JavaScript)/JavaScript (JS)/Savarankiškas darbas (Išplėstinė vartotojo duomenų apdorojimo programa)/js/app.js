@@ -1,8 +1,7 @@
-
+// Vartotojo duomenys
 let vardas = "jonas";
 let pavarde = "petrauskas";
-let asmensKodas = "38102131234";
-
+let asmensKodas = "38507131234";
 
 if (vardas.length < 3) {
     console.log("Klaida: Vardas turi būti bent 3 simbolių ilgio.");

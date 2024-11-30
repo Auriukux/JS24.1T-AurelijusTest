@@ -1,0 +1,100 @@
+body {
+    margin: 0 auto;
+    max-width: 880px;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    padding: 0 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+header img {
+    width: 300px;
+    height: auto;
+}
+
+.year-left,
+.year-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #eee;
+}
+
+.year-left {
+    left: 180px;
+}
+
+.year-right {
+    right: 185px;
+}
+
+header h1 {
+    font-size: 60px;
+    margin: 0 0 40px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+main {
+    flex-grow: 1;
+}
+
+article p {
+    font-family: 'Georgia', serif;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px 0;
+    text-align: center;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding-top: 15px;
+    padding-left: 0;
+}
+
+nav ul li {
+    flex: 1 0 150px;
+    text-align: center;
+    border-radius: 5px;
+    text-align: left;
+    padding: 0 14px;
+}
+
+nav ul li h2 {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+nav ul li span {
+    font-size: 0.9em;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1em;
+    color: #eee;
+    border-top: 1px solid #eee;
+}

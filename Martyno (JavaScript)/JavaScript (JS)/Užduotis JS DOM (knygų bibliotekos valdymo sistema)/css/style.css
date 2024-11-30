@@ -1,0 +1,10 @@
+.book {
+    padding: 0 10px;
+    height: 150px;
+    width: 250px;
+    border: 2px solid #ccc;
+}
+
+.read {
+    background-color: #e0ffe0;
+}

@@ -30,7 +30,7 @@ x1, y1 = 65, 850  # 65 kilometrų ir 850 metrų
 x2, y2 = 75, 700  # 75 kilometrų ir 700 metrų
 
 # Apskaičiavimas
-viso_km, viso_m = skaičiuoti_automobilis(x1, y1, x2, y2)
+viso_kilometrai, viso_metrai = skaičiuoti_automobilis(x1, y1, x2, y2)
 
 # Rezultato išvedimas
-print(f"Automobilis per dvi valandas nuvažiavo {viso_km} kilometrų ir {viso_m} metrų.")
+print(f"Automobilis per dvi valandas nuvažiavo {viso_kilometrai} kilometrų ir {viso_metrai} metrų.")

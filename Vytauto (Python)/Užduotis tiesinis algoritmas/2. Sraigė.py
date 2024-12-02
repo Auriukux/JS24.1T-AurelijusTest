@@ -35,7 +35,7 @@ x1, y1 = 3, 8  # 3 centimetrai ir 8 milimetrai
 x2, y2 = 4, 7  # 4 centimetrai ir 7 milimetrai
 
 # Apskaičiavimas
-cm, mm = skaičiuoti_sraigė(x1, y1, x2, y2)
+centimetrai, milimetrai = skaičiuoti_sraigė(x1, y1, x2, y2)
 
 # Rezultato išvedimas
-print(f"Sraigė per 2 minutes nušliaužė {cm} centimetrų ir {mm} milimetrų.")
+print(f"Sraigė per 2 minutes nušliaužė {centimetrai} centimetrų ir {milimetrai} milimetrų.")

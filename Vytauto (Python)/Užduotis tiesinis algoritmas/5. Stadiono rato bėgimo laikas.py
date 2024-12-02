@@ -35,7 +35,7 @@ x1, y1 = 1, 45  # Pirmosios pusės laikas
 x2, y2 = 2, 20  # Antrosios pusės laikas
 
 # Apskaičiavimas
-min, sek = skaičiuoti_bėgimo_laiką(x1, y1, x2, y2)
+minutes, sekundes = skaičiuoti_bėgimo_laiką(x1, y1, x2, y2)
 
 # Rezultato išvedimas
-print(f"Užtruko {min} min. ir {sek} sek.")
+print(f"Užtruko {minutes} min. ir {sekundes} sek.")

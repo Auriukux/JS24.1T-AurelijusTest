@@ -26,7 +26,6 @@ def zaisti_zaidima():
                 print("Sugeneruotas skaičius yra mažesnis.")
             else:
                 print(f"Sveikiname! Sugeneruotas skaičius buvo {tikslus_skaicius}.")
-                # Call the function to write the game messages when the correct number is guessed
                 irasyti_zaidimo_pranesimus(atspeti_skaiciai, tikslus_skaicius)
                 break
         else:
@@ -36,7 +35,6 @@ def zaisti_zaidima():
 
     if spejimams_likusia == 0:
         print(f"Žaidimas baigtas. Sugeneruotas skaičius buvo {tikslus_skaicius}.")
-        # Call the function to write the game messages if all guesses are used up
         irasyti_zaidimo_pranesimus(atspeti_skaiciai, tikslus_skaicius)
 
     print("Jūs atspėjote šiuos skaičius:", atspeti_skaiciai)
